@@ -1,0 +1,563 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0; padding: 0; box-sizing: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+li{list-style: none;}
+
+h1{
+    font-size: 3rem;
+    padding: 1%;
+    color: #74d4c0;
+    /* margin-bottom: 10%; */
+}
+.headertext{
+    color: #d4f3ef;
+}
+.blink, .pricespan{
+    font-size: 2.5rem;
+    font-family: cursive;
+    color: #74d4c0;
+    animation: blink 2s linear infinite;
+}
+@keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+}
+h3{
+    color: #888888;
+}
+.extra-div h3, .servicediv h3{
+    font-size: 1rem;
+    margin: 20px 0 15px 0;
+    font-weight: 900;
+    line-height: 1.1;
+    word-spacing: 4px;
+}
+p{
+    font-size: 1rem;
+    line-height: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+i{
+    color: #2fccd0;
+}
+
+
+
+
+
+/* -------------Actual CSS Starts------------- */
+
+
+.header{
+    width: 100%;
+    height: 100vh;
+     background-image: linear-gradient(rgba(0, 168, 255, 0.3), rgba(0, 168, 255, 0.3)),
+     url('../images/header-img.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
+}
+
+.header::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    right: 0;
+    left: 0;
+    bottom: 0%;
+    z-index: -1;
+    opacity: 0.1;
+    background: linear-gradient(to right, #1e5799 0%, #3ccdbb 0%, #16c9f6 100%);
+}
+
+.navbar::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    right: 0;
+    left: 0;
+    bottom: 0%;
+    z-index: -1;
+    opacity: 0.1;
+    background: linear-gradient(to right, #1e5799 0%, #3ccdbb 0%, #16c9f6 100%);
+}
+
+.nav-item a{
+    color: #fff!important;
+    font-weight: bold;
+
+}
+.navbar-brand{
+    color: #fff!important;
+    font-weight: bold;
+}
+/* .nav-item a{
+    color: #fff;
+}
+.nav-item a:hover{
+    color: #2fccd0;
+} */
+.header-section{
+    width: 100%;
+    height: inherit;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+.center-div{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+.header-para{
+    /* margin-top: 15%; */
+    font-size: 1rem;
+    color: #fff;
+    /* padding-bottom: 10%; */
+}
+.header-buttons a{
+    border: 1px solid #fff;
+    border-radius: 100px;
+    margin: 0 5px;
+    padding: 12px 35px;
+    outline: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+}
+.header-buttons a:hover{
+    color: #50d1c0;
+    background: #fff;
+    text-decoration: none;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Extra-Div css starts from here */
+
+.header-extradiv{
+    width: 100%; height: auto;
+    margin: 100px 0;
+    text-align: center;
+}
+.extra-div{
+    background-color: #fff;
+    padding: 50px!important;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+.extra-div:hover{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    transform: translateY(-20px);
+    
+   
+}
+
+/* Extra-Div css ends from here */
+
+
+/* What do we offer Section Starts*/
+
+.serviceOffers{
+    background-color: #ecfbfc;
+    padding: 50px 0;
+    margin-bottom: 50px;
+}
+
+.headings{
+    margin-bottom: 50px;
+}
+
+.headings h1{
+    font-size: 2rem;
+    font-weight: 600;
+
+}
+.names h3{
+    color: #888888;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.service-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress{
+    height: 0.6rem!important;
+    margin-bottom: 25px!important;
+    background: #dbdbdb;
+}
+/* What do we offer Section ends*/
+
+
+
+/* Project done css Starts here */
+
+.project-work{
+    margin: 100px 0;
+}
+.project-work h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Project done css ends here */
+
+
+
+
+/* Pricing css Starts */
+
+.pricing{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 50px;
+}
+.pricing::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    right: 0;
+    left: 0;
+    bottom: 0%;
+    z-index: -1;
+    background: linear-gradient(160deg, #74d4c0 55%, #fff 0%);
+}
+.card{
+    transition: 4s ease;
+}
+.card-header{
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: #fff;
+    padding: 25px 9px!important;
+}
+.card-body{
+    padding: 25px 9px!important;
+}
+.card-body span{
+    color: #d92027!important;
+}
+.card-body li{
+    margin: 10px 0;
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 15px;
+    color: #888888;
+}
+.card-footer{
+    background: #fff;
+    padding: 25px 0px!important;
+}
+.card-footer a{
+    border: 1px solid #50d1c0;
+    border-radius: 100px;
+    margin: 0 5px;
+    padding: 12px 35px;
+    outline: none;
+    color: #50d1c0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+}
+.card:hover .card-footer a {
+    color: #fff;
+    background: #50d1c0;
+    text-decoration: none;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+.card:hover{
+    transform: translateY(-20px);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    transition: 0.2s ease;
+}
+.card:hover .card-header{
+    color: #50d1c0;
+}
+.card-second{
+    transform: translateY(-20px);
+    
+}
+/* Pricing css Ends */
+
+
+
+/* Customer Feedback Starts */
+
+.happyclients{
+    width: 100%;
+    height: 100vh;
+    padding: 80px 0;
+
+}
+.checked {
+    color: orange;
+  }
+.box{
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+.box:hover{
+    background-color: #50d1c0;
+}
+.carousel-indicators{
+    position: absolute;
+    bottom: -60px!important;
+}
+.carousel-indicators li{
+    background-color: #50d1c0;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: #50d1c0;
+}
+.box a{
+    position: relative;
+}
+.box a img{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    border-radius: 50%;
+
+}
+.box a:after{
+    content: "\f10d";
+    font-family: FontAwesome;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #1e5799 0%, #3ccdbb 0%, #16c9f6 100%);
+    color: white;
+    position: absolute;
+    top: 120%;
+    left: 70%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.box h1{
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.box h3{
+    font-size: 13px;
+    font-weight: 400;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+/* Customer Feedback Ends*/
+
+
+
+/* Contact Us starts */
+
+.contactus{
+    width: 100%;
+    height: 100vh;
+    padding: 80px 50px;
+    position: relative;
+}
+.contactus::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    right: 0;
+    left: 0;
+    bottom: 0%;
+    z-index: -1;
+    background: linear-gradient(-160deg, #74d4c0 50%, #fff 0%);
+
+}
+
+.form-btn button{
+    border: 1px solid #fff;
+    border-radius: 100px;
+    margin: 10px 5px;
+    padding: 12px 35px;
+    outline: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    background-color:transparent;
+}
+form:hover .form-btn button{
+    background-color: #74d4c0;
+    box-shadow: 5px 10px 8px #888888;
+}
+.fontawesome{
+   color: white;
+}
+
+::placeholder{
+    font-size: 0.8rem;
+}
+/* Contact Us ends */
+
+
+/* Newsletter css starts */
+
+.newsletter{
+    width: 100%;
+    height: auto;
+    margin: 80px auto;
+    justify-content: center;
+    text-align: center;
+}
+.news-input{
+    border-radius: 100px 0 0 100px;
+    min-width: 150px;
+}
+.input-group-text{
+    color: white;
+    background-color: #74d4c0;
+    border-radius: 0 100px 100px 0;
+
+}
+/* Newsletter css ends */
+
+
+/* Footer Section */
+.footersection{
+    width: 100%;
+    height: auto;
+    padding: 50px  50px ;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+    background-color: #74d4c0;
+}
+.social-icon{
+    padding: 50px 50px;
+    color: white;
+}
+.social-icon:hover {
+    transform: scale(1.5); 
+}
+.icon-footer{
+    color: #d92027;
+}
+.footersection li a{
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+}
+.footersection h3{
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Scroll to top Button */
+#mybtn{
+    display: none;
+    z-index: 99;
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    border: none;
+    color: white;
+    background-color: #d92027;
+    padding: 10px;
+    border-radius: 10px;
+}
+#mybtn:hover{
+    background-color: #606060;
+
+
+}
+
+
+
+/* Media Queries */
+
+@media(max-width: 768px){
+    .nav-item{
+        text-align: center!important;
+    }
+    .pricing, .happyclients, .contactus{
+        height: auto;
+        margin-top: 50px;
+    }
+    .card-second{
+        transform: translateY(0px);
+        margin: 30px 0;
+
+    }
+    .footerdiv{
+        padding: 30px 0;
+    }
+}
+
+
+
+/* Logo Glowing effect */
+.glow {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
